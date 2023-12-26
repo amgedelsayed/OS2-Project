@@ -1,0 +1,22 @@
+.shape{
+    width: 70px;
+    aspect-ratio: 1;
+    background: rgb(2,0,36);
+    background: linear-gradient(rgb(255, 255, 255,0.2),rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(100px);
+    position: absolute;
+    margin: 5px;
+    bottom: -100px;
+    animation: anime 10s cubic-bezier(0,.3,1,.8) 0s ;
+}
+@keyframes anime {
+    0%{
+        bottom: -100px;
+        rotate: 0deg;
+    }
+    100%{
+        bottom: 100%;
+        rotate: 1000deg;
+    }
+    
+}

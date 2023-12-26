@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: os-names
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: os-names
+  template:
+    metadata:
+        labels:
+          app: os-names
+    spec:
+      containers:
+        - name: os-names
+          image: mostafakhairy0305927/os-names
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

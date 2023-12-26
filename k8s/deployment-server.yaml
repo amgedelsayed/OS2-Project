@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: os2-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: os2-server
+  template:
+    metadata:
+        labels:
+          app: os2-server
+    spec:
+      containers:
+        - name: os2-server
+          image: mostafakhairy0305927/os2-server
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
